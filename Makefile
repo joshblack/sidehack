@@ -1,0 +1,2 @@
+dev:
+	iojs server.js
