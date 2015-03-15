@@ -2,18 +2,17 @@ import React from 'react';
 
 const Emphasis = React.createClass({
   propTypes: {
-    fontSize: React.PropTypes.number
-  },
-
-  getDefaultProps () {
-    return { fontSize: 16 };
+    'fontFamily': React.PropTypes.string.isRequired,
+    'fontSize': React.PropTypes.number.isRequired,
+    'color': React.PropTypes.string.isRequired
   },
 
   render () {
     let style = {
-      'fontFamily': 'DroidSerif',
-      'fontStyle': 'italic',
-      'fontSize': this.props.fontSize
+      'color': this.props.color,
+      'fontFamily': this.props.fontFamily,
+      'fontSize': this.props.fontSize,
+      'fontStyle': 'italic'
     };
 
     return (
