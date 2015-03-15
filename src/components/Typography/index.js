@@ -1,3 +1,4 @@
+import Logo from './Logo';
 import MainTitle from './MainTitle';
 import Subtitle from './Subtitle';
 import SectionTitle from './SectionTitle';
@@ -9,6 +10,7 @@ import Strong from './Strong';
 import Emphasis from './Emphasis';
 
 export {
+  Logo,
   MainTitle,
   Subtitle,
   SectionTitle,

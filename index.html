@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>React Starter</title>
+    <title>Sidehack</title>
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
     <style>
         @font-face {
             font-family: 'Oswald';
@@ -39,9 +40,36 @@
             src: url('./fonts/DroidSans/DroidSans-Bold/DroidSans-Bold.woff') format('woff');
             font-weight: bold;
         }
+
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background: #F8F8F8;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #app {
+            width: 100%;
+            height: 100%
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            outline: none;
+        }
     </style>
 </head>
 <body>
+    <div id="app"></div>
     <script src="/__build__/bundle.js"></script>
 </body>
 </html>

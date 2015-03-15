@@ -38,9 +38,7 @@ const Paragraph = React.createClass({
     });
 
     return (
-      <div>
         <p style={style}>{children}</p>
-      </div>
     );
   }
 });
