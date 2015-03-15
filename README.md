@@ -1,6 +1,8 @@
 # Sidehack
 
-Senior Project for the University of Florida
+![Sidehack Home Page](http://i.imgur.com/rDRFnUF.jpg)
+
+Senior Project for the University of Florida.
 
 ## Components
 
