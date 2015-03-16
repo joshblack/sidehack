@@ -1,24 +1,26 @@
 import React from 'react';
+import { css, rem } from '../../helpers';
+import { colors, fonts } from './styles';
 
-const Emphasis = React.createClass({
+export const Emphasis = React.createClass({
   propTypes: {
-    'fontFamily': React.PropTypes.string.isRequired,
-    'fontSize': React.PropTypes.number.isRequired,
-    'color': React.PropTypes.string.isRequired
+    children: React.PropTypes.string.isRequired
+  },
+
+  getDefaultProps () {
+    return {
+      style: css`
+        font-family: ${fonts.em};
+        font-style: italic;
+        font-size: ${rem(14)}rem;
+        color: ${colors.body};
+      `
+    }
   },
 
   render () {
-    let style = {
-      'color': this.props.color,
-      'fontFamily': this.props.fontFamily,
-      'fontSize': this.props.fontSize,
-      'fontStyle': 'italic'
-    };
-
     return (
-      <em style={style}>{this.props.children}</em>
+      <em style={this.props.style}>{this.props.children}</em>
     );
   }
 });
-
-export default Emphasis;

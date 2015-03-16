@@ -1,46 +1,24 @@
-import React from 'react/addons';
-import { color, bodyFont, italicFont } from './shared';
+import React from 'react';
+import { css, rem } from '../../helpers';
+import { colors, fonts } from './styles';
 
-import Strong from './Strong';
-import Emphasis from './Emphasis';
+export const Paragraph = React.createClass({
+  getDefaultProps () {
+    return {
+      style: css`
+        width: 500px;
+        font-family: ${fonts.body};
+        font-weight: normal;
+        font-size: ${rem(14)}rem;
+        color: ${colors.body};
+        line-height: ${rem(23)}rem;
+      `
+    }
+  },
 
-const Paragraph = React.createClass({
   render () {
-    let style = {
-      color,
-      'fontFamily': bodyFont,
-      'fontWeight': 'normal',
-      'fontSize': 14,
-      'width': 500,
-      'lineHeight': 1.6
-    };
-
-    let children = React.Children.map(this.props.children, (child) => {
-      let props = {
-        'color': style.color,
-        'fontSize': style.fontSize
-      };
-
-      if (child.type === Emphasis.type) {
-        props['fontFamily'] = italicFont;
-
-        return React.addons.cloneWithProps(child, props);
-      }
-      else if (child.type === Strong.type) {
-        props['fontFamily'] = bodyFont;
-
-        return React.addons.cloneWithProps(child, props);
-      }
-      else {
-        return child;
-      }
-
-    });
-
     return (
-        <p style={style}>{children}</p>
+        <p style={this.props.style}>{this.props.children}</p>
     );
   }
 });
-
-export default Paragraph;

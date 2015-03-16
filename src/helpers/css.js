@@ -1,4 +1,5 @@
 import camelize from '../vendor/camelize';
+import from 'core-js';
 
 /**
  * Takes in a Template String and returns a matching object of styles

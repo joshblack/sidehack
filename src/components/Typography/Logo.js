@@ -1,28 +1,28 @@
 import React from 'react';
-import { color, titleFont } from './shared';
+import { css } from '../../helpers';
+import { colors, fonts } from './styles';
 
-const Logo = React.createClass({
+export const Logo = React.createClass({
   getDefaultProps() {
     return {
-      'size': 24
+      size: 24
     };
   },
 
   render () {
-    let base = {
-      'display': 'inline-block',
-      'fontFamily': 'Oswald',
-      'fontWeight': '600',
-      'fontSize': this.props.size
-    };
+    let style = css`
+      display: inline-block;
+      font-family: ${fonts.title};
+      font-weight: 600;
+      font-size: ${this.props.size};
+      color: ${colors.default};
+    `;
 
     return (
-      <h1 style={base}>
+      <h1 style={style}>
         <span>SIDE</span>
         <span style={{ color: '#6AEC7B' }}>HACK</span>
       </h1>
     );
   }
 });
-
-export default Logo;

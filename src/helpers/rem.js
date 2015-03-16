@@ -6,7 +6,5 @@
  * @return {Number}        Equivalent rem value
  */
 export function rem(px, base = 16) {
-  const value = Number(px) / base;
-
-  return `${value}rem`;
+  return Number(px) / base;
 }
