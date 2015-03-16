@@ -1,6 +1,6 @@
 import React from 'react';
 import { css, rem } from '../../helpers';
-import { colors, fonts } from './styles';
+import { colors, fonts, text } from './styles';
 
 export const Emphasis = React.createClass({
   propTypes: {
@@ -12,7 +12,7 @@ export const Emphasis = React.createClass({
       style: css`
         font-family: ${fonts.em};
         font-style: italic;
-        font-size: ${rem(14)}rem;
+        font-size: ${text.size}rem;
         color: ${colors.paragraph};
       `
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { css, rem } from '../../helpers';
-import { colors, fonts } from './styles';
+import { colors, fonts, text } from './styles';
 
 export const Strong = React.createClass({
   propTypes: {
@@ -12,7 +12,7 @@ export const Strong = React.createClass({
       style: css`
         font-family: ${fonts.body};
         font-weight: bold;
-        font-size: ${rem(14)}rem;
+        font-size: ${text.size}rem;
         color: ${colors.paragraph};
       `
     }
