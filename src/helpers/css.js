@@ -1,3 +1,5 @@
+import camelize from '../vendor/camelize';
+
 /**
  * Takes in a Template String and returns a matching styles object
  * @param  {String}  literals
@@ -14,7 +16,10 @@ export function css(literals, ...substitutions) {
 }
 
 function validateStyle([prop, def]) {
-  return [prop, def.replace(/;$/, '').trim()];
+  return [
+    camelize(prop),
+    def.replace(/;$/, '').trim()
+  ];
 }
 
 function clean(str) {
