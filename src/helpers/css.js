@@ -1,24 +1,25 @@
 import camelize from '../vendor/camelize';
 
 /**
- * Takes in a Template String and returns a matching styles object
+ * Takes in a Template String and returns a matching object of styles
  * @param  {String}  literals
  * @param  {Array}   substitutions
  * @return {Object}
  */
 export function css(literals, ...substitutions) {
-  let rules = clean(passThrough(literals, ...substitutions));
-  let styles = rules.map((line) => line.split(':')).map(validateStyle);
+  let declarations = clean(passThrough(literals, ...substitutions))
+        .map((declaration) => declaration.split(':'))
+        .map(validateDeclaration);
 
-  return styles.reduce((o, [prop, def]) => {
-    return Object.assign(o, { [prop]: def })
+  return declarations.reduce((o, [prop, value]) => {
+    return Object.assign(o, { [prop]: value })
   }, {})
 }
 
-function validateStyle([prop, def]) {
+function validateDeclaration([prop, value]) {
   return [
     camelize(prop),
-    def.replace(/;$/, '').trim()
+    value.replace(/;$/, '').trim()
   ];
 }
 
