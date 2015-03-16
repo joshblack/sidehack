@@ -5,6 +5,6 @@ export const fonts = {
 }
 
 export const colors = {
-  body: '#4A4A4A',
+  paragraph: '#4A4A4A',
   default: '#4A4A4A'
 }

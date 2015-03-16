@@ -13,7 +13,7 @@ export const Emphasis = React.createClass({
         font-family: ${fonts.em};
         font-style: italic;
         font-size: ${rem(14)}rem;
-        color: ${colors.body};
+        color: ${colors.paragraph};
       `
     }
   },

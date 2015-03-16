@@ -13,7 +13,7 @@ export const Strong = React.createClass({
         font-family: ${fonts.body};
         font-weight: bold;
         font-size: ${rem(14)}rem;
-        color: ${colors.body};
+        color: ${colors.paragraph};
       `
     }
   },

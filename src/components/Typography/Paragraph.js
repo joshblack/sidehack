@@ -10,7 +10,7 @@ export const Paragraph = React.createClass({
         font-family: ${fonts.body};
         font-weight: normal;
         font-size: ${rem(14)}rem;
-        color: ${colors.body};
+        color: ${colors.paragraph};
         line-height: ${rem(23)}rem;
       `
     }
