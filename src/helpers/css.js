@@ -20,13 +20,13 @@ export function css(literals, ...substitutions) {
 function validateDeclaration([prop, value]) {
   return [
     camelize(prop),
-    value.replace(/;$/, '').trim()
+    value.trim()
   ];
 }
 
 function clean(str) {
-  return str.split('\n')
-    .map((line) => line.trim())
+  return str.split(';')
+    .map(l => l.trim())
     .filter((line) => line);
 }
 
