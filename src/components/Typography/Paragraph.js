@@ -13,7 +13,7 @@ export const Paragraph = React.createClass({
         color: ${colors.paragraph};
         line-height: ${rem(23)}rem;
       `
-    }
+    };
   },
 
   render () {

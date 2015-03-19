@@ -15,7 +15,7 @@ export const Strong = React.createClass({
         font-size: ${text.size}rem;
         color: ${colors.paragraph};
       `
-    }
+    };
   },
 
   render () {
