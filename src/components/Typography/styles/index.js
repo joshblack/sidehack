@@ -3,7 +3,8 @@ import { rem } from '../../../helpers';
 export const fonts = {
   body: `'DroidSans', sans-serif`,
   em: `'DroidSerif', serif`,
-  title: `'Oswald'`
+  title: `'Oswald'`,
+  button: `'DroidSans', sans-serif`
 };
 
 export const colors = {

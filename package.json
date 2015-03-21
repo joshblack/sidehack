@@ -19,6 +19,7 @@
   "dependencies": {
     "core-js": "^0.7.2",
     "react": "^0.12.2",
-    "react-router": "^0.12.4"
+    "react-router": "^0.12.4",
+    "whatwg-fetch": "^0.7.0"
   }
 }
