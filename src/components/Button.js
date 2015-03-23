@@ -21,8 +21,7 @@ export class Button extends React.Component {
   getDefaultProps () {
     return {
       'children': 'Button',
-      'action': () => {},
-      'style': style
+      'action': () => {}
     }
   }
 

@@ -1,20 +1,29 @@
 import React from 'react';
-import { color, italicFont } from './shared';
+import { assign, css, rem } from '../../helpers';
+import { text } from '../base';
 
-const Quote = React.createClass({
+let { color, font, size  } = text.get('quote');
+
+const style = css`
+  font-family: ${font};
+  font-style: italic;
+  font-size: ${size}rem;
+  text-align: center;
+  color: ${color};
+  line-height: ${rem(34)}rem;
+`;
+
+export class Quote extends React.Component{
   render () {
-    let style = {
-      'fontFamily': italicFont,
-      'fontStyle': 'italic',
-      'fontSize': 24,
-      'textAlign': 'center',
-      color
-    };
-
     return (
-      <blockquote style={style}>{this.props.children}</blockquote>
+      <blockquote style={assign(style, this.props.style)}>
+        {this.props.children}
+      </blockquote>
     );
   }
-});
+};
 
-export default Quote;
+Quote.propTypes = {
+  children: React.PropTypes.string,
+  style: React.PropTypes.object
+};

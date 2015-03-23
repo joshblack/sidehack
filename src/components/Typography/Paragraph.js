@@ -1,5 +1,5 @@
-import { Component } from 'react';
-import { css, rem } from '../../helpers';
+import React from 'react';
+import { assign, css, rem } from '../../helpers';
 import { colors, text } from '../base';
 
 const { font, size } = text.get('body');
@@ -15,12 +15,16 @@ let style = css`
   line-height: ${lineHeight.rem};
 `;
 
-export class Paragraph extends Component {
+export class Paragraph extends React.Component {
   render () {
     return (
-        <p style={style}>
+        <p style={assign(style, this.props.style)}>
           {this.props.children}
         </p>
     );
   }
+}
+
+Paragraph.propTypes = {
+  style: React.PropTypes.object
 }

@@ -1,19 +1,27 @@
 import React from 'react';
-import { color, titleFont } from './shared';
+import { assign, css, rem } from '../../helpers';
+import { colors, text } from '../base';
 
-const Subtitle = React.createClass({
+const { font, color } = text.get('title');
+
+let style = css`
+  font-family: ${font};
+  font-weight: 200;
+  font-size: 30px;
+  color: ${color};
+  line-height: ${rem(41)}rem;
+`;
+
+export class Subtitle extends React.Component {
   render () {
-    let style = {
-      'fontFamily': titleFont,
-      'fontWeight': '200',
-      'fontSize': 30,
-      color
-    };
-
     return (
-      <h2 style={style}>{this.props.children}</h2>
+      <h2 style={assign(style, this.props.style)}>
+        {this.props.children}
+      </h2>
     );
   }
-});
+};
 
-export default Subtitle;
+Subtitle.propTypes = {
+  style: React.PropTypes.object
+};

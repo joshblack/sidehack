@@ -16,7 +16,7 @@ let style = css`
 export class Logo extends Component {
   render () {
     return (
-      <h1 style={Object.assign(style, this.props.style)}>
+      <h1 style={Object.assign({}, style, this.props.style)}>
         <span>SIDE</span>
         <span style={{ color: '#6AEC7B' }}>HACK</span>
       </h1>

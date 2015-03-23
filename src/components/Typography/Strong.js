@@ -2,7 +2,7 @@ import React from 'react';
 import { css, rem } from '../../helpers';
 import { colors, text } from '../base';
 
-const { font, size } = text.get('em');
+const { font, size } = text.get('body');
 const color = colors.get('text');
 
 let style = css`

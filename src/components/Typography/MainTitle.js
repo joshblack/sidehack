@@ -1,19 +1,27 @@
 import React from 'react';
-import { color, titleFont } from './shared';
+import { assign, css, rem } from '../../helpers';
+import { colors, text } from '../base';
 
-const MainTitle = React.createClass({
+const { font, color } = text.get('title');
+
+let style = css`
+  font-family: ${font};
+  font-weight: bold;
+  font-size: 32px;
+  color: ${color};
+  line-height: ${rem(49)}rem;
+`;
+
+export class MainTitle extends React.Component {
   render () {
-    let style = {
-      'fontFamily': titleFont,
-      'fontWeight': 'bold',
-      'fontSize': 32,
-      color
-    };
-
     return (
-      <h1 style={style}>{this.props.children}</h1>
+      <h1 style={assign(style, this.props.style)}>
+        {this.props.children}
+      </h1>
     );
   }
-});
+};
 
-export default MainTitle;
+MainTitle.propTypes = {
+  style: React.PropTypes.object
+};

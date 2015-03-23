@@ -2,27 +2,26 @@ import React from 'react';
 import { assign, css, rem } from '../../helpers';
 import { text } from '../base';
 
-const { color, font } = text.get('body');
+const { color, font } = text.get('title');
 
 const style = css`
   font-family: ${font};
-  font-weight: normal;
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 20px;
   color: ${color};
-  line-height: ${rem(26)}rem;
+  line-height: ${rem(27)}rem;
 `;
 
-export class Intro extends React.Component{
+export class SectionSubheading extends React.Component{
   render () {
     return (
-      <p style={assign(style, this.props.style)}>
+      <h3 style={assign(style, this.props.style)}>
         {this.props.children}
-      </p>
+      </h3>
     );
   }
 }
 
-Intro.propTypes = {
-  children: React.PropTypes.string,
+SectionSubheading.propTypes = {
   style: React.PropTypes.object
 }

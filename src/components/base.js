@@ -35,6 +35,12 @@ export const text = createMapFromObject({
     color: colors.get('text')
   },
 
+  quote: {
+    font: `'DroidSerif', serif`,
+    color: colors.get('text'),
+    size: rem(24)
+  },
+
   button: {
     font: `'DroidSans', sans-serif`,
     color: colors.get('button').light,

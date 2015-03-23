@@ -2,27 +2,26 @@ import React from 'react';
 import { assign, css, rem } from '../../helpers';
 import { text } from '../base';
 
-const { color, font } = text.get('body');
+const { font, color } = text.get('body');
 
 const style = css`
   font-family: ${font};
-  font-weight: normal;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: ${rem(23)}rem;
   color: ${color};
-  line-height: ${rem(26)}rem;
 `;
 
-export class Intro extends React.Component{
+export class ListItem extends React.Component {
   render () {
     return (
-      <p style={assign(style, this.props.style)}>
+      <li style={assign(style, this.props.style)}>
         {this.props.children}
-      </p>
+      </li>
     );
   }
 }
 
-Intro.propTypes = {
+ListItem.propTypes = {
   children: React.PropTypes.string,
   style: React.PropTypes.object
-}
+};

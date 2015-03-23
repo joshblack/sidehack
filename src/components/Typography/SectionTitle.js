@@ -1,19 +1,27 @@
 import React from 'react';
-import { color, titleFont } from './shared';
+import { assign, css, rem } from '../../helpers';
+import { text } from '../base';
 
-const SectionTitle = React.createClass({
+const { color, font } = text.get('title');
+
+const style = css`
+  font-family: ${font};
+  font-weight: bold;
+  font-size: 24px;
+  color: ${color};
+  line-height: ${rem(32)}rem;
+`;
+
+export class SectionTitle extends React.Component{
   render () {
-    let style = {
-      'fontFamily': titleFont,
-      'fontWeight': 'bold',
-      'fontSize': 24,
-      color
-    };
-
     return (
-      <h3 style={style}>{this.props.children}</h3>
+      <h3 style={assign(style, this.props.style)}>
+        {this.props.children}
+      </h3>
     );
   }
-});
+}
 
-export default SectionTitle;
+SectionTitle.propTypes = {
+  style: React.PropTypes.object
+}

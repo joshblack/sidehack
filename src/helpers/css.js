@@ -38,8 +38,8 @@ export function css(literals, ...substitutions) {
         .map((declaration) => declaration.split(':'))
         .map(validateDeclaration);
 
-  return declarations.reduce((o, [prop, value]) => {
+  return Object.freeze(declarations.reduce((o, [prop, value]) => {
     return Object.assign(o, { [prop]: value });
-  }, {});
+  }, {}));
 }
 
