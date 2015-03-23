@@ -1,4 +1,4 @@
-import React from 'react';
+import { Component } from 'react';
 import Avatar from '../Avatar';
 import Searchbar from '../Searchbar';
 import { Logo } from '../Typography';
@@ -13,7 +13,7 @@ import {
   searchItemStyle,
   avatarItemStyle } from './styles';
 
-const Header = React.createClass({
+export class Header extends Component{
   render () {
     return (
       <header style={base}>
@@ -37,6 +37,4 @@ const Header = React.createClass({
       </header>
     );
   }
-});
-
-export default Header;
+}

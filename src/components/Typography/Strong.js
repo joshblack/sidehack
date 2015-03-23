@@ -1,26 +1,28 @@
 import React from 'react';
 import { css, rem } from '../../helpers';
-import { colors, fonts, text } from './styles';
+import { colors, text } from '../base';
 
-export const Strong = React.createClass({
-  propTypes: {
-    children: React.PropTypes.string.isRequired
-  },
+const { font, size } = text.get('em');
+const color = colors.get('text');
 
-  getDefaultProps () {
-    return {
-      style: css`
-        font-family: ${fonts.body};
-        font-weight: bold;
-        font-size: ${text.size}rem;
-        color: ${colors.paragraph};
-      `
-    };
-  },
+let style = css`
+  font-family: ${font};
+  font-weight: bold;
+  font-size: ${size}rem;
+  color: ${color};
+`;
 
+export class Strong extends React.Component {
   render () {
     return (
-      <strong style={this.props.style}>{this.props.children}</strong>
+      <strong style={Object.assign(style, this.props.style)}>
+        {this.props.children}
+      </strong>
     );
   }
-});
+};
+
+Strong.propTypes = {
+  children: React.PropTypes.string.isRequired,
+  style: React.PropTypes.object
+};

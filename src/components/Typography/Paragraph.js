@@ -1,24 +1,26 @@
-import React from 'react';
+import { Component } from 'react';
 import { css, rem } from '../../helpers';
-import { colors, fonts, text } from './styles';
+import { colors, text } from '../base';
 
-export const Paragraph = React.createClass({
-  getDefaultProps () {
-    return {
-      style: css`
-        width: 500px;
-        font-family: ${fonts.body};
-        font-weight: normal;
-        font-size: ${text.size}rem;
-        color: ${colors.paragraph};
-        line-height: ${rem(23)}rem;
-      `
-    };
-  },
+const { font, size } = text.get('body');
+const lineHeight = text.get('lineHeight');
+const color = colors.get('text');
 
+let style = css`
+  width: 500px;
+  font-family: ${font};
+  font-weight: normal;
+  font-size: ${size}rem;
+  color: ${color};
+  line-height: ${lineHeight.rem};
+`;
+
+export class Paragraph extends Component {
   render () {
     return (
-        <p style={this.props.style}>{this.props.children}</p>
+        <p style={style}>
+          {this.props.children}
+        </p>
     );
   }
-});
+}

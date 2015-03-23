@@ -1,17 +1,18 @@
 import React from 'react';
-import Header from './Header';
+import { RouteHandler } from 'react-router';
+import { Home } from './Home';
 import { css } from '../helpers';
+
+let style = css`
+    width: 100%;
+    height: 100%;
+`;
 
 export const App = React.createClass({
   render () {
-    let baseStyles = css`
-      width: 100%;
-      height: 100%;
-    `;
-
     return (
-      <div style={baseStyles}>
-        <Header/>
+      <div style={style}>
+        <RouteHandler/>
       </div>
     );
   }

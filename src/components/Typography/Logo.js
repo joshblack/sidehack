@@ -1,28 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { css } from '../../helpers';
-import { colors, fonts } from './styles';
+import { colors, text } from '../base';
 
-export const Logo = React.createClass({
-  getDefaultProps() {
-    return {
-      size: 24
-    };
-  },
+const { font } = text.get('title');
+const color = colors.get('text');
 
+let style = css`
+  display: inline-block;
+  font-family: ${font};
+  font-weight: 600;
+  font-size: 24px;
+  color: ${color};
+`;
+
+export class Logo extends Component {
   render () {
-    let style = css`
-      display: inline-block;
-      font-family: ${fonts.title};
-      font-weight: 600;
-      font-size: ${this.props.size};
-      color: ${colors.default};
-    `;
-
     return (
-      <h1 style={style}>
+      <h1 style={Object.assign(style, this.props.style)}>
         <span>SIDE</span>
         <span style={{ color: '#6AEC7B' }}>HACK</span>
       </h1>
     );
   }
-});
+}
+
+Logo.propTypes = {
+  style: React.PropTypes.object
+};
