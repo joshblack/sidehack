@@ -1,12 +1,13 @@
-import { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router';
+
 import { Avatar } from '../Avatar';
 import { Search } from '../Search';
 import { Logo } from '../Typography';
-import { Link } from 'react-router';
 
 import from './Header.scss';
 
-export class Header extends Component{
+export class Header extends React.Component {
   render () {
     return (
       <header className="site-header">

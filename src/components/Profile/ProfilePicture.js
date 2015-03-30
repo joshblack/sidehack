@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from '../helpers';
+import { css } from '../../helpers';
 
 const size = '175px';
 

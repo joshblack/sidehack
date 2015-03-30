@@ -1,6 +1,6 @@
 import React from 'react';
-import { css } from '../helpers';
-import { text } from './base';
+import { css } from '../../helpers';
+import { text } from '../base';
 
 const container = css`
   margin-left: 25px;

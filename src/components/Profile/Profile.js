@@ -1,14 +1,12 @@
 import React from 'react';
-import { Header } from './Header';
-import { Banner } from './Banner';
-import { Menu } from './Menu';
-import { ProfileHeader } from './ProfileHeader';
-import { css } from '../helpers';
 
-const layout = css`
-  display: flex;
-  justify-content: center;
-`;
+import { Header } from '../Header';
+import { Banner } from '../Banner';
+import { Menu } from '../Menu';
+import { ProfileHeader } from './ProfileHeader';
+import { ProfileSection } from './ProfileSection';
+
+import from './Profile.scss';
 
 export class Profile extends React.Component {
   render () {
@@ -16,9 +14,10 @@ export class Profile extends React.Component {
       <div>
         <Header/>
         <Banner/>
-        <div style={layout}>
-          <Menu/>
+        <Menu/>
+        <div className="profile">
           <ProfileHeader/>
+          <ProfileSection/>
         </div>
       </div>
     );
