@@ -4,15 +4,9 @@ import { ProfileTitle } from './ProfileTitle';
 
 import { css } from '../helpers';
 
-const container = css`
-  background: #F04665;
-  width: 100%;
-  height: 150px;
-`;
-
 const section = css`
   position: relative;
-  top: 50px;
+  top: -125px;
   display: flex;
   justify-content: center;
 `;
@@ -20,12 +14,10 @@ const section = css`
 export class ProfileHeader extends React.Component {
   render () {
     return (
-      <div style={container}>
-        <section style={section}>
-          <ProfilePicture/>
-          <ProfileTitle/>
-        </section>
-      </div>
+      <section style={section}>
+        <ProfilePicture/>
+        <ProfileTitle/>
+      </section>
     );
   }
 }

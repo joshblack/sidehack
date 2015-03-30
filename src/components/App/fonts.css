@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('../../fonts/Oswald/Oswald-Bold/Oswald-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../../fonts/Oswald/Oswald-Demibold/Oswald-Demibold.woff') format('woff');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../../fonts/Oswald/Oswald-Light/Oswald-Light.woff') format('woff');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'DroidSerif';
+    src: url('../../fonts/DroidSerif/DroidSerif-Italic/DroidSerif-Italic.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DroidSans';
+    src: url('../../fonts/DroidSans/DroidSans/DroidSans.woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'DroidSans';
+    src: url('../../fonts/DroidSans/DroidSans-Bold/DroidSans-Bold.woff') format('woff');
+    font-weight: bold;
+}

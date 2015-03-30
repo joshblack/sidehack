@@ -1,16 +1,27 @@
 import React from 'react';
 import { css } from '../helpers';
+import { text } from './base';
 
-let container = css`
+const container = css`
   margin-left: 25px;
+`;
+
+const title = css`
+  font-family: ${text.get('body').font};
+  color: white;
+`;
+
+const subtitle = css`
+  font-family: ${text.get('body').font};
+  color: white;
 `;
 
 export class ProfileTitle extends React.Component {
   render () {
     return (
       <div style={container}>
-        <h1>Elizabeth Rose</h1>
-        <p>Aspiring Front-End Developer</p>
+        <h1 style={title}>Elizabeth Rose</h1>
+        <p style={subtitle}>Aspiring Front-End Developer</p>
       </div>
     );
   }

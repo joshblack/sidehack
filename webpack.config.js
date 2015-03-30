@@ -1,6 +1,8 @@
 'use strict';
 
 var webpack = require('webpack');
+var autoprefixer = require('autoprefixer-core');
+var colorFunction = require('postcss-color-function');
 
 module.exports = {
   'devtool': 'eval',
@@ -24,7 +26,28 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loaders: ['react-hot', 'babel'] }
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loaders: ['react-hot', 'babel?playground&experimental']
+      },
+      {
+        test: /\.css$/,
+        loaders: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader'
+        ]
+      },
+      {
+        test: /\.(png|woff)$/,
+        loader: 'url-loader?limit=100000'
+      },
+      {
+        test: /\.svg$/,
+        loader: 'file-loader'
+      }
     ]
-  }
+  },
+  postcss: [autoprefixer, colorFunction()]
 }

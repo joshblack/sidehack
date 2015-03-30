@@ -1,0 +1,21 @@
+.btn--login {
+    align-self: flex-end;
+    margin: 35px;
+}
+
+.btn--default {
+    background: white;
+    border: 1px solid #ADADAD;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-family: 'DroidSans';
+    font-size: 16px;
+    color: #8B8A8A;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn--default:hover {
+    cursor: pointer;
+    background: color(white b(3%));
+}

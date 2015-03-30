@@ -7,7 +7,6 @@ import { Dashboard } from './components/Dashboard';
 import { Profile } from './components/Profile';
 
 // Developer Related
-import { Icons } from './components/Icons';
 import { Typography } from './components/Typography';
 
 export default (
@@ -15,7 +14,6 @@ export default (
     <Route name="dashboard" path="/dashboard" handler={Dashboard}/>
     <Route name="profile" path="/profile" handler={Profile}/>
 
-    <Route name="icons" path="/icons" handler={Icons}/>
     <Route name="typography" path="/typography" handler={Typography}/>
     <DefaultRoute handler={Home}/>
   </Route>

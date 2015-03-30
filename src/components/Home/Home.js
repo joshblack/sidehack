@@ -4,30 +4,14 @@ import { Button } from '../Button';
 import { Logo } from '../Typography';
 import { PromoCopy } from './PromoCopy';
 import { PromoUserList } from './PromoUserList';
-import { css } from '../../helpers';
 
-export const Home = React.createClass({
-  getDefaultProps() {
-    return {
-      style: css`
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      `
-    }
-  },
+import from './Home.css';
 
+export class Home extends React.Component {
   render () {
-    let loginStyle = css`
-      align-self: flex-end;
-      margin: 35px;
-    `;
-
     return (
-      <div style={this.props.style}>
-        <Button style={loginStyle}>
-          Login
-        </Button>
+      <div className="home">
+        <Button className="btn--login">Login</Button>
         <Logo size="64px" />
         <PromoCopy/>
         <div>
@@ -38,4 +22,4 @@ export const Home = React.createClass({
       </div>
     );
   }
-});
+}
