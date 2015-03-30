@@ -1,10 +1,20 @@
+$menu-text-color: #828587;
+
 .menu {
     margin: 50px 50px 0 0;
+}
+
+.menu a {
+    text-decoration: none;
 }
 
 .menu--container {
     display: flex;
     align-items: center;
+}
+
+.menu__user-picture {
+    vertical-align: middle;
 }
 
 .menu--user-section {
@@ -19,31 +29,31 @@
 
 .menu--user-name {
   font-family: "Franklin Gothic Medium";
-  color: #828587;
-  font-size: 14px;
+  color: $menu-text-color;
+  font-size: 16px;
   margin: 0;
 }
 
 .menu--user-name:hover {
-    color: color(#828587 b(95%));
+    color: darken($menu-text-color, 15%);
 }
 
 .menu--edit-link {
     font-family: "Franklin Gothic Book";
-    color: #828587;
+    color: $menu-text-color;
     font-size: 12px;
     margin: 0;
 }
 
 .menu--edit-link:hover {
-    color: color(#828587 b(95%));
+    color: darken($menu-text-color, 15%);
     text-decoration: underline;
 }
 
 .menu--section-title {
     font-family: 'Franklin Gothic Medium';
     font-size: 12px;
-    color: #828587;
+    color: $menu-text-color;
     margin: 10px 0 10px 0;
 }
 
@@ -64,13 +74,13 @@
     align-items: center;
     font-family: 'Franklin Gothic Book';
     font-size: 12px;
-    padding: 10px;
+    padding: 7px;
     transition: all 0.2s ease-out;
 }
 
 .menu--nav-icon {
     width: 20px;
-    color: #828587;
+    color: $menu-text-color;
 }
 
 .menu--nav-link:hover,
@@ -79,16 +89,15 @@
     cursor: pointer;
 }
 
-.menu--nav-link a,
-.menu--project-list-item a {
-    text-decoration: none;
-    color: #828587;
-    margin-left: 10px;
+.menu--nav-link p,
+.menu--project-list-item p {
+    color: $menu-text-color;
+    margin: 0 0 0 10px;
 }
 
 .demo--box {
     display: inline-block;
-    background: #828587;
+    background: $menu-text-color;
     width: 25px;
     height: 25px;
 }

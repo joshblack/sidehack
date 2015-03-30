@@ -1,0 +1,26 @@
+$border-color: #D9D9DE;
+$search-placeholder-color: #AFAFAF;
+$search-focus-color: darken(#AFAFAF, 25%);
+
+.search--container {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+}
+
+.search--input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding-left: 50px;
+  font-family: DroidSans;
+  font-size: 16px;
+  color: $search-placeholder-color;
+}
+
+.search--input:focus {
+    outline: none;
+    color: $search-focus-color;
+}

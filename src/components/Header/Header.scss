@@ -1,0 +1,58 @@
+$header-link-color: #AFAFAF;
+
+.site-header {
+  background: #ffffff;
+  border: 1px solid #D9D9DE;
+  width: 100%;
+  height: 65px;
+}
+
+.site-header__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  padding: 0;
+}
+
+.site-header__list-item {
+  display: inline-block;
+  height: 100%;
+}
+
+.site-header__list-item--logo {
+  display: flex;
+  align-items: center;
+  margin-left: 65px;
+  flex-grow: 1;
+}
+
+.site-header__list-item--link {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.site-header__list-item--link a {
+  font-family: 'DroidSans';
+  font-weight: normal;
+  font-size: 16px;
+  color: $header-link-color;
+  text-decoration: none;
+  transition: 0.2s all ease-out;
+}
+
+.site-header__list-item--link a:hover {
+  color: darken($header-link-color, 25%);
+}
+
+.site-header__list-item--search {
+  flex-grow: 3;
+  margin-right: 25px;
+}
+
+.site-header__list-item--avatar {
+
+}

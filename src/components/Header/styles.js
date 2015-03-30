@@ -1,22 +1,5 @@
 import from 'core-js';
 
-export const base = {
-  'background': '#ffffff',
-  'border': '1px solid #D9D9DE',
-  'width': '100%',
-  'height': 75
-};
-
-export const listStyle = {
-  'display': 'flex',
-  'justifyContent': 'space-between',
-  'alignItems': 'center',
-  'width': '85%',
-  'height': '100%',
-  'margin': 'auto',
-  'padding': 0
-};
-
 export const listItemStyle = {
   'display': 'inline-block',
   'height': '100%'
