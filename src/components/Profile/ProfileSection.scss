@@ -1,0 +1,20 @@
+$article-title-color: #686868;
+$article-body-color: #686868;
+
+.profile-article {
+    margin: 40px 0;
+    line-height: 20px;
+}
+
+.profile-article__title {
+    font-family: 'Franklin Gothic Medium';
+    font-size: 24px;
+    color: $article-title-color;
+    margin: 0;
+}
+
+.profile-article__body {
+    font-family: 'Franklin Gothic Book';
+    font-size: 14px;
+    color: $article-body-color;
+}

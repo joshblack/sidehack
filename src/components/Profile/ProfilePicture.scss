@@ -1,0 +1,8 @@
+$img-size: 100px;
+
+.profile-picture {
+  background: #B1B1B2;
+  width: $img-size;
+  height: $img-size;
+  transition: all 0.2s ease-in;
+}

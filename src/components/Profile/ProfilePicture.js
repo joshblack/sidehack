@@ -1,25 +1,13 @@
 import React from 'react';
-import { css } from '../../helpers';
 
-const size = '175px';
-
-let dummy = css`
-  background: #B1B1B2;
-  width: ${size};
-  height: ${size};
-  border: 5px solid white;
-`;
-
-let img = css`
-  background: #B1B1B2;
-  width: ${size};
-  height: ${size};
-  border: 5px solid white;
-`;
+import from './ProfilePicture.scss';
 
 export class ProfilePicture extends React.Component {
   constructor() {
-    this.state = { loading: true, avatarURI: '' }
+    this.state = {
+      loading: true,
+      avatarURI: ''
+    }
   }
 
   componentDidMount() {
@@ -40,7 +28,7 @@ export class ProfilePicture extends React.Component {
 
   render () {
     return this.state.loading
-      ? <div style={dummy} />
-      : <img style={img} src={this.state.avatarURI} />;
+      ? <div className="profile-picture" />
+      : <img className="profile-picture" src={this.state.avatarURI} />;
   }
 }

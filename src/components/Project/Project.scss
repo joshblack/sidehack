@@ -1,0 +1,13 @@
+.project {
+    margin: 50px 0;
+}
+
+.project:first-child {
+    margin-top: 0;
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}

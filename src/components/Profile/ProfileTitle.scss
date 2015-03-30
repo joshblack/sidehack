@@ -1,0 +1,20 @@
+$heading-color: #686868;
+$subtitle-color: #828587;
+
+.profile-title {
+    margin-left: 25px;
+}
+
+.profile-title__heading {
+  font-family: 'Franklin Gothic Medium';
+  color: $heading-color;
+  font-size: 24px;
+  margin: 0;
+}
+
+.profile-title__subtitle {
+  font-family: 'Franklin Gothic Book';
+  color: $subtitle-color;
+  font-size: 18px;
+  margin: 0;
+}

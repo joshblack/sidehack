@@ -13,7 +13,6 @@ export class Profile extends React.Component {
     return (
       <div>
         <Header/>
-        <Banner/>
         <Menu/>
         <div className="profile">
           <ProfileHeader/>
