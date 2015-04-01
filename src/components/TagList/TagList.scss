@@ -1,0 +1,30 @@
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.tag-list__item {
+    font-family: 'Franklin Gothic Book';
+    font-size: 12px;
+    color: #686868;
+    background: #E4E3E0;
+    padding: 5px 10px;
+    transition: all 0.2s ease-out;
+    margin: auto 5px;
+}
+
+.tag-list__item:first-child {
+    margin-left: 0;
+}
+
+.tag-list__item:last-child {
+    margin-right: 0;
+}
+
+.tag-list__item:hover {
+    background: darken(#E4E3E0, 15%);
+    color: #ffffff;
+    cursor: pointer;
+}

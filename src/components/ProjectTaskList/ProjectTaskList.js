@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { ProjectTask } from './ProjectTask';
+import { ProjectTask } from '../ProjectTask';
 
-import from './ProjectTasks.scss';
+import from './ProjectTaskList.scss';
 
-export class ProjectTasks extends React.Component {
+export class ProjectTaskList extends React.Component {
   render () {
     const Tasks = this.props.tasks.map((task) => {
       return <ProjectTask task={task} />;

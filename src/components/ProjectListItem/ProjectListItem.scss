@@ -1,0 +1,13 @@
+.project-list__item {
+    margin: 50px 0;
+}
+
+.project-list__item:first-child {
+    margin-top: 0;
+}
+
+.project-list__item-header {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}

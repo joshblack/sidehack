@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { Project } from '../Project';
+import { ProjectListItem } from '../ProjectListItem';
 
 import from './ProjectList.scss';
 
 export class ProjectList extends React.Component {
   render () {
     let Projects = [
-      <Project key="1" />,
-      <Project key="2" />,
-      <Project key="3" />
+      <ProjectListItem key="1" />,
+      <ProjectListItem key="2" />,
+      <ProjectListItem key="3" />
     ];
 
     return (
