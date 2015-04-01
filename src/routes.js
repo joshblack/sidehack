@@ -5,16 +5,18 @@ import { App } from './components/App';
 import { Home } from './components/Home';
 import { Dashboard } from './components/Dashboard';
 import { Profile } from './components/Profile';
+import { Project } from './components/Project';
 
 // Developer Related
 import { Typography } from './components/Typography';
 
 export default (
   <Route path="/" handler={App}>
-    <Route name="dashboard" path="/dashboard" handler={Dashboard}/>
-    <Route name="profile" path="/profile" handler={Profile}/>
+    <Route name="dashboard" path="/dashboard" handler={Dashboard} />
+    <Route name="profile" path="/profile" handler={Profile} />
+    <Route name="project" path="/project" handler={Project} />
 
-    <Route name="typography" path="/typography" handler={Typography}/>
+    <Route name="typography" path="/typography" handler={Typography} />
     <DefaultRoute handler={Home}/>
   </Route>
 );

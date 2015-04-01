@@ -13,10 +13,12 @@ export class Profile extends React.Component {
     return (
       <div>
         <Header/>
-        <Menu/>
-        <div className="profile">
-          <ProfileHeader/>
-          <ProfileSection/>
+        <div className="profile-container">
+          <Menu/>
+          <div className="profile">
+            <ProfileHeader/>
+            <ProfileSection/>
+          </div>
         </div>
       </div>
     );

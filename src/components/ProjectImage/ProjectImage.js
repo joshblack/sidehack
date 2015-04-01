@@ -1,4 +1,5 @@
 import React from 'react';
+import sx from 'classnames';
 
 import { Image } from '../Image';
 
@@ -9,7 +10,11 @@ export class ProjectImage extends React.Component {
     alt: React.PropTypes.string,
     src: React.PropTypes.string,
     width: React.PropTypes.number,
-    height: React.PropTypes.number
+    height: React.PropTypes.number,
+    className: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.array
+    ])
   }
 
   render () {
@@ -19,7 +24,7 @@ export class ProjectImage extends React.Component {
         src={this.props.src}
         width={this.props.width}
         height={this.props.height}
-        classNames="project-image"
+        classNames={sx(["project-image", this.props.className])}
       />
     );
   }

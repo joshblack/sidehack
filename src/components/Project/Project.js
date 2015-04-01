@@ -1,40 +1,63 @@
 import React from 'react';
 
-import { ProjectImage } from './ProjectImage';
-import { ProjectDetails } from './ProjectDetails';
-import { ProjectDesc } from './ProjectDesc';
-import { ProjectTasks } from './ProjectTasks';
+import { Header } from '../Header';
+import { Banner } from '../Banner';
+import { Menu } from '../Menu';
+import { ProjectImage } from '../ProjectImage';
+import { ProjectInfo } from '../ProjectInfo';
+import { ProjectFeed } from '../ProjectFeed';
 
 import from './Project.scss';
 
-const dummyProjectDesc = `Aliquam eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit amet metus mattis varius. Donec sit amet ligula eget nisi sodales egestas.
-`;
-
-const dummyTasks = [
-  'Mauris accumsan eros eget libero posuere vulputate',
-  'Sed nec felis pellentesque, lacinia dui sed, ultricies sapien.',
-  'Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum.'
-];
+const mockName = 'Hello Ruby';
+const mockSlogan = 'Teaching Children the Magic of Programming!';
+const mockProject = {
+  about: 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur.',
+  members: [
+    {
+      id: 1,
+      url: 'http://placehold.it/65x65'
+    },
+    {
+      id: 2,
+      url: 'http://placehold.it/65x65'
+    },
+    {
+      id: 3,
+      url: 'http://placehold.it/65x65'
+    }
+  ]
+};
+const mockProjectID = 1;
 
 export class Project extends React.Component {
   render () {
     return (
-      <section className="project">
-        <header className="project-header">
-          <ProjectImage
-            src="http://placehold.it/45x45"
-            width={45}
-            height={45}
-          />
-          <ProjectDetails
-            name="Hello Ruby"
-            startDate="March 2014"
-            endDate="December 2014"
-          />
-        </header>
-        <ProjectDesc text={dummyProjectDesc} />
-        <ProjectTasks tasks={dummyTasks} />
-      </section>
+      <div>
+        <Header/>
+        <Banner color="#F04665" />
+        <div className="project-container">
+          <Menu/>
+          <section className="project">
+            <header className="project-details">
+              <ProjectImage
+                src="http://placehold.it/175x175"
+                width={175}
+                height={175}
+                className="project-image--large"
+              />
+              <div className="project-title">
+                <h1 className="project-title__name">{mockName}</h1>
+                <p className="project-title__subtitle">{mockSlogan}</p>
+              </div>
+            </header>
+            <div className="project-content">
+              <ProjectFeed id={mockProjectID} />
+              <ProjectInfo project={mockProject} />
+            </div>
+          </section>
+        </div>
+      </div>
     );
   }
 }

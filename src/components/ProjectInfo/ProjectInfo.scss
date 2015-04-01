@@ -1,0 +1,35 @@
+.project-info {
+    width: 300px;
+}
+
+.project-info {
+    background: white;
+    border: 1px solid #D9D9DE;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+.project-info__section {
+    margin-bottom: 45px;
+}
+
+.project-info__section-header {
+    font-family: 'Franklin Gothic Medium';
+    font-size: 16px;
+    color: #B1B1B2;
+    margin: 0;
+}
+
+.project-info__section-body {
+    font-family: 'Franklin Gothic Book';
+    font-size: 14px;
+    color: #686868;
+    margin: 14px 0;
+}
+
+.project-info__member-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}

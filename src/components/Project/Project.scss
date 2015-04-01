@@ -1,13 +1,53 @@
+.project-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
 .project {
-    margin: 50px 0;
+    margin-left: 200px;
+    position: relative;
+    top: -150px;
+    width: 100%;
 }
 
-.project:first-child {
-    margin-top: 0;
-}
-
-.project-header {
+.project-details {
     display: flex;
     align-items: center;
-    margin: 15px 0;
+    margin-bottom: 50px;
+}
+
+.project-title {
+    margin-left: 25px;
+}
+
+.project-title__name {
+    font-family: 'Franklin Gothic Medium';
+    color: white;
+    font-size: 36px;
+    margin: 0;
+}
+
+.project-title__subtitle {
+    font-family: 'Franklin Gothic Book';
+    color: white;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.project-content {
+    display: flex;
+    width: 100%;
+}
+
+.project-feed {
+    width: 500px;
+    margin-right: 30px;
+}
+
+.project-image--large {
+    border: 5px solid white;
+    border-radius: 3px;
 }
