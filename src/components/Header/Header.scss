@@ -1,6 +1,8 @@
 $header-link-color: #AFAFAF;
 
 .site-header {
+  position: relative;
+  z-index: 10;
   background: #ffffff;
   border: 1px solid #D9D9DE;
   width: 100%;
@@ -49,10 +51,6 @@ $header-link-color: #AFAFAF;
 }
 
 .site-header__list-item--search {
-  flex-grow: 3;
+  flex-grow: 8;
   margin-right: 25px;
-}
-
-.site-header__list-item--avatar {
-
 }

@@ -2,15 +2,16 @@ $border-color: #D9D9DE;
 $search-placeholder-color: #AFAFAF;
 $search-focus-color: darken(#AFAFAF, 25%);
 
-.search--container {
-  display: inline-block;
+.search-container {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   border-left: 1px solid $border-color;
   border-right: 1px solid $border-color;
 }
 
-.search--input {
+.search-input {
   height: 100%;
   width: 100%;
   border: none;
@@ -20,7 +21,7 @@ $search-focus-color: darken(#AFAFAF, 25%);
   color: $search-placeholder-color;
 }
 
-.search--input:focus {
+.search-input:focus {
     outline: none;
     color: $search-focus-color;
 }

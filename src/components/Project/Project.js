@@ -39,7 +39,7 @@ export class Project extends React.Component {
         <div className="project-container">
           <Menu/>
           <section className="project">
-            <header className="project-details">
+            <header className="project-header">
               <ProjectImage
                 src="http://placehold.it/175x175"
                 width={175}

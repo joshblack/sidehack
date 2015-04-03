@@ -1,0 +1,31 @@
+.search-dropdown {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    background: white;
+    border: 1px solid #D9D9DE;
+    border-radius: 3px;
+    animation: slideIn 0.4s ease
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-65px); }
+    to { transform: translateY(0); }
+}
+
+.search-dropdown__results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 25px;
+    list-style: none;
+}
+
+.search-dropdown__result {
+    width: 100%;
+    margin: 15px 0;
+    text-align: center;
+}
