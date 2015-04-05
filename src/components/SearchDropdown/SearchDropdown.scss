@@ -25,7 +25,24 @@
 }
 
 .search-dropdown__result {
+    display: flex;
+    align-items: center;
     width: 100%;
-    margin: 15px 0;
-    text-align: center;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.search-dropdown__result:hover {
+    cursor: pointer;
+    background: #EEEEEE;
+}
+
+.search-dropdown__result-info {
+    margin-left: 15px;
+}
+
+.search-dropdown__result-link {
+    width: 100%;
+    text-decoration: none;
+    color: #686868;
 }

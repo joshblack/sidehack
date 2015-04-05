@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "<%= fontName %>";
+  src: url('<%= fontPath %>/<%= fontName %>.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.<%= className %>:before {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "<%= fontName %>";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  line-height: 1;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+}
+
+<% _.each(glyphs, function(glyph) { %>.<%= className %>-<%= glyph.name %>:before { content: "\<%= glyph.codepoint.toString(16) %>" }
+<% }); %>

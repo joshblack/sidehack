@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Image } from '../Image';
+import { Icon } from '../Icon';
 
 import from './Menu.scss';
 
@@ -25,7 +26,9 @@ export class Menu extends React.Component {
         <ul className="menu--nav">
           <Link to="/">
             <li className="menu--nav-link">
-              <span><img className="menu--nav-icon" src={require('../../icons/feed.svg')}/></span>
+              <span>
+                <Icon className="menu--nav-icon" src={require('../../icons/feed.svg')}/>
+              </span>
               <p>Feed</p>
             </li>
           </Link>

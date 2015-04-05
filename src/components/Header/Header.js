@@ -23,6 +23,10 @@ export class Header extends React.Component {
   }
 
   render () {
+    let Dropdown = this.state.query
+      ? <SearchDropdown query={this.state.query} />
+      : '';
+
     return (
       <header className="site-header">
         <ul className="site-header__list">
@@ -42,7 +46,7 @@ export class Header extends React.Component {
             <Avatar url="//www.gravatar.com/avatar/def8d17129bf0913c9f0f133acc0f631.png?large" />
           </li>
         </ul>
-        <SearchDropdown query={this.state.query} />
+        {Dropdown}
       </header>
     );
   }
