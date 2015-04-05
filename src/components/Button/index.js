@@ -1,6 +1,6 @@
 import React from 'react';
 
-import from './Button.css';
+import from './Button.scss';
 
 let style = `
   background: white;

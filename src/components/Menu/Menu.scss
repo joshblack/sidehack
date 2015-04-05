@@ -81,8 +81,11 @@ $menu-text-color: #828587;
 }
 
 .menu--nav-icon {
-    width: 20px;
     color: $menu-text-color;
+}
+
+.menu--nav-icon__tasks:before {
+    font-size: 10px;
 }
 
 .menu--nav-link:hover,

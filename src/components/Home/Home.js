@@ -5,7 +5,7 @@ import { Logo } from '../Typography';
 import { PromoCopy } from './PromoCopy';
 import { PromoUserList } from './PromoUserList';
 
-import from './Home.css';
+import from './Home.scss';
 
 export class Home extends React.Component {
   render () {
