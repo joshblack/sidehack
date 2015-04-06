@@ -45,19 +45,34 @@ export class Menu extends React.Component {
         <ul className="menu--project-list">
           <Link to="/">
             <li className="menu--project-list-item">
-              <div className="demo--box"></div>
+              <Image
+                alt="Project List Item Picture"
+                src="http://placehold.it/25x25"
+                width={25}
+                height={25}
+              />
               <p>Hello Ruby</p>
             </li>
           </Link>
           <Link to="/">
             <li className="menu--project-list-item">
-              <div className="demo--box"></div>
+              <Image
+                alt="Project List Item Picture"
+                src="http://placehold.it/25x25"
+                width={25}
+                height={25}
+              />
               <p>Sense</p>
             </li>
           </Link>
           <Link to="/">
             <li className="menu--project-list-item">
-              <div className="demo--box"></div>
+              <Image
+                alt="Project List Item Picture"
+                src="http://placehold.it/25x25"
+                width={25}
+                height={25}
+              />
               <p>ElectroThrill</p>
             </li>
           </Link>

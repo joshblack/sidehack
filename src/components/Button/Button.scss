@@ -1,9 +1,8 @@
-.btn--login {
-    align-self: flex-end;
-    margin: 35px;
+.btn {
+    margin: 15px;
 }
 
-.btn--default {
+.btn__home {
     background: white;
     border: 1px solid #ADADAD;
     border-radius: 8px;
@@ -15,7 +14,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-.btn--default:hover {
+.btn__home:hover {
     cursor: pointer;
-    background: color(white b(3%));
+    background: darken(white, 5%);
 }

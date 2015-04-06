@@ -1,4 +1,5 @@
 import React from 'react';
+import sx from 'classnames';
 
 import from './Button.scss';
 
@@ -15,24 +16,15 @@ let style = `
 
 export class Button extends React.Component {
 
-  getDefaultProps () {
-    return {
-      'children': 'Button',
-      'action': () => {}
-    }
+  static defaultProps = {
+      'className': ''
   }
 
   render () {
     return (
-      <button className="btn--default">
+      <button className={sx('btn', this.props.className)}>
         {this.props.children}
       </button>
     );
   }
-};
-
-Button.propTypes = {
-  'children': React.PropTypes.string,
-  'action': React.PropTypes.func,
-  'style': React.PropTypes.object
-};
+}

@@ -1,0 +1,14 @@
+.promo-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 20%;
+    height: auto;
+    transition: 0.3s all;
+}
+
+.promo-user__img {
+    width: 100%;
+    height: 100%;
+}

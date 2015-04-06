@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 import { Button } from '../Button';
-import { Logo } from '../Typography';
+import { Logo } from '../Logo';
 import { PromoCopy } from './PromoCopy';
-import { PromoUserList } from './PromoUserList';
+import { PromoUserList } from '../PromoUserList';
 
 import from './Home.scss';
 
@@ -11,14 +12,16 @@ export class Home extends React.Component {
   render () {
     return (
       <div className="home">
-        <Button className="btn--login">Login</Button>
-        <Logo size="64px" />
+        <Link to="/" className="btn__login">
+          <Button className="btn__home">Login</Button>
+        </Link>
+        <Logo />
         <PromoCopy/>
-        <div>
-          <Button>Learn More</Button>
-          <Button>Sign Up</Button>
+        <div className="promo-buttons">
+          <Button className="btn__home">Learn More</Button>
+          <Button className="btn__home">Sign Up</Button>
         </div>
-        <PromoUserList count={18} />
+        <PromoUserList count={20} />
       </div>
     );
   }

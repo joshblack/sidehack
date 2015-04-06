@@ -1,0 +1,46 @@
+.promo-users__list {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    list-style: none;
+    padding: 0;
+}
+
+.promo-users__list::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    background:
+        radial-gradient(
+            rgba(0, 0, 0, .35),
+            rgba(0, 0, 0, .75)
+        );
+}
+
+.promo-users__list::after {
+    content: "Start Something Big";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 500px;
+    height: 450px;
+    text-align: center;
+    color: white;
+    font-family: 'DroidSans';
+    font-weight: bold;
+    font-size: 48px;
+    z-index: 10;
+    line-height: 0;
+    margin: auto;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.75);
+}
