@@ -11,4 +11,10 @@
 .promo-user__img {
     width: 100%;
     height: 100%;
+    animation: loaded 1.5s;
+}
+
+@keyframes loaded {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

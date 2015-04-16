@@ -3,12 +3,13 @@
     position: relative;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 1200px;
+    height: 100%;
+    margin-bottom: 0;
     list-style: none;
     padding: 0;
 }
 
-.promo-users__list::before {
+.promo-users__list--loaded::before {
     content: "";
     display: block;
     position: absolute;
@@ -24,7 +25,7 @@
         );
 }
 
-.promo-users__list::after {
+.promo-users__list--loaded::after {
     content: "Start Something Big";
     display: inline-block;
     position: absolute;
@@ -42,5 +43,5 @@
     z-index: 10;
     line-height: 0;
     margin: auto;
-    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.75);
+    text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.75);
 }

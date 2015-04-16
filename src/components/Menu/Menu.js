@@ -6,20 +6,25 @@ import { FeedIcon, TasksIcon } from '../Icon';
 import from './Menu.scss';
 
 export class Menu extends React.Component {
+  static contextTypes = {
+    user: React.PropTypes.object.isRequired
+  }
+
   render () {
+    const { user } = this.context;
     return (
       <div className="menu">
         <div className="menu--container">
           <Link to="/">
             <Image alt="User Profile Picture"
-                 src="http://www.gravatar.com/avatar/def8d17129bf0913c9f0f133acc0f631.png?large"
+                 src={user.avatar_url}
                  height={35}
                  width={35}
                  classNames="menu__user-picture"
             />
           </Link>
           <div className="menu--user-section">
-            <Link to="/" className="menu--user-name">Josh Black</Link>
+            <Link to="/" className="menu--user-name">{user.name}</Link>
             <Link to="/" className="menu--edit-link">Edit Profile</Link>
           </div>
         </div>

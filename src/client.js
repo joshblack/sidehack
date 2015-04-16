@@ -3,6 +3,7 @@ import Router from 'react-router';
 import routes from './routes';
 
 import from 'core-js';
+import from 'babel-core/polyfill';
 
 window.React = React;
 

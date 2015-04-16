@@ -10,6 +10,7 @@ export const PromoCopy = React.createClass({
         font-size: 18px;
         color: #7F7F7F;
         text-align: center;
+        line-height: 30px;
       `
     }
   },

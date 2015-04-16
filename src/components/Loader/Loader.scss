@@ -1,0 +1,15 @@
+.loader__basic {
+    width: 25px;
+    height: 25px;
+    margin: 25px;
+    background: inherit;
+    border: 2px solid #dfdfdf;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: rotate .75s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}

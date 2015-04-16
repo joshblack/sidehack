@@ -1,0 +1,36 @@
+@keyframes rotate {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}
+
+.auth-login {
+    background: #6AEC7B;
+    width: 100vw;
+    height: 100vh;
+}
+
+.auth-loading {
+    height: 65px;
+    width: 65px;
+    border: 3px solid white;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: rotate .75s linear infinite;
+    margin: 25px;
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

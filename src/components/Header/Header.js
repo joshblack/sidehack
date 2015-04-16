@@ -18,6 +18,18 @@ export class Header extends React.Component {
     this.queryUpdate = this.queryUpdate.bind(this);
   }
 
+  static contextTypes = {
+    user: React.PropTypes.object
+  }
+
+  static childContextTypes = {
+    user: React.PropTypes.object
+  }
+
+  getChildContext () {
+    return { user: this.context.user };
+  }
+
   queryUpdate (trigger, query ) {
     this.setState({ trigger, query });
   }
@@ -43,7 +55,7 @@ export class Header extends React.Component {
             <Search queryUpdate={this.queryUpdate} />
           </li>
           <li className="site-header__list-item">
-            <Avatar url="//www.gravatar.com/avatar/def8d17129bf0913c9f0f133acc0f631.png?large" />
+            <Avatar />
           </li>
         </ul>
         {Dropdown}

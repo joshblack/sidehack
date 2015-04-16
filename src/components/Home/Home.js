@@ -18,8 +18,10 @@ export class Home extends React.Component {
         <Logo />
         <PromoCopy/>
         <div className="promo-buttons">
-          <Button className="btn__home">Learn More</Button>
-          <Button className="btn__home">Sign Up</Button>
+          <Link to="/"><Button className="btn__home">Learn More</Button></Link>
+          <a href="http://localhost:8000/auth/github">
+            <Button className="btn__home">Sign Up</Button>
+          </a>
         </div>
         <PromoUserList count={20} />
       </div>
