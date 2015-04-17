@@ -20,7 +20,6 @@ export class Auth extends React.Component {
 
   async componentDidMount () {
     const { router } = this.context;
-
     try {
       const user = await Auth.login();
 
@@ -30,9 +29,8 @@ export class Auth extends React.Component {
         }
         else {
           this.setState({ loggedIn: true, user });
-          router.transitionTo('/auth/dashboard');
         }
-      }, 2000);
+      }, 1000);
     }
     catch (e) {
       console.error(e);
@@ -54,33 +52,3 @@ export class Auth extends React.Component {
     }
   }
 }
-
-
-
-// function createAuthContainer(InnerComponent) {
-
-//   class AuthContainer extends React.Component {
-//     static contextTypes: {
-//       user: React.PropTypes.user.isRequired
-//     }
-
-//     render() {
-//       return <InnerComponent user={this.context.user} />;
-//     }
-//   }
-
-//   return AuthContainer;
-// }
-
-// class MyAuthComponent extends React.Component {
-
-//   static propTypes = {
-//     user: React.PropTypes.object
-//   }
-
-//   render () {
-//     return <div>{this.props.user.name}</div>;
-//   }
-// }
-
-// var MyContainer = createAuthContainer(MyAuthComponent);

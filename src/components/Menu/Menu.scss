@@ -2,8 +2,8 @@ $menu-text-color: #828587;
 
 .menu {
     display: inline-block;
-    position: fixed;
     margin-top: 25px;
+    min-width: 150px;
 }
 
 .menu a {

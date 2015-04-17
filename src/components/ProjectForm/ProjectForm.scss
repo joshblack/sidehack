@@ -1,0 +1,73 @@
+.project-form__container {
+    display: flex;
+    width: 75%;
+    margin: 50px auto;
+}
+
+.project-form__menu {
+    margin: 25px;
+}
+
+.project-form {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    margin: 25px;
+    padding: 50px;
+    border-radius: 3px;
+}
+
+.project-form__project-card {
+    background: white;
+    min-width: 250px;
+    height: 500px;
+    margin: 25px;
+    border-radius: 3px;
+}
+
+.project-form__header-title {
+    font-family: 'Franklin Gothic Medium';
+    font-size: 48px;
+    color: #686868;
+    margin: 0;
+}
+
+.project-form__header-text {
+    font-family: 'Franklin Gothic Book';
+    font-size: 16px;
+    color: #343434;
+    line-height: 22px;
+    margin-top: 25px;
+}
+
+.project-description__label {
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium';
+    margin: 15px 0;
+    width: 40%;
+    color: #6a7989;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.project-description__textarea {
+    font-family: 'Franklin Gothic Book';
+    font-size: 14px;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #B9C1CA;
+    transition: 0.3s all;
+    border-radius: 3px;
+    resize: none;
+}
+
+.project-description__textarea:focus {
+    border: 1px solid #00ffaa;
+    outline: none;
+}
+
+.project-form__section-title {
+    font-family: 'Franklin Gothic Medium';
+    color: #686868;
+    font-size: 24px;
+}
