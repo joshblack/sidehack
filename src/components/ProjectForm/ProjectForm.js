@@ -17,6 +17,13 @@ export class ProjectForm extends React.Component {
     return { user: this.props.user };
   }
 
+  handleOnSubmit (e) {
+    e.preventDefault();
+
+    // TODO: Handle submit of project information
+    // TODO: Input validations
+  }
+
   render () {
     return (
       <div>
@@ -34,53 +41,58 @@ export class ProjectForm extends React.Component {
                 In this form, you have the ability to enter in information about your new project! Fill out the fields below and see a preview of your project card appear on the right hand side. At the end, once you're satisfied with the information you've entered, hit submit and your project will be saved!
               </p>
             </header>
-            <section className="project-form__title">
-              <Input name="project-title"
-                     type="text"
-                     label="Project Title"
-              />
-            </section>
-            <section className="project-form__slogan">
-              <Input name="project-slogan"
-                     type="text"
-                     label="Project Slogan"
-              />
-            </section>
-            <section className="project-form__logo">
-                <Input name="project-logo"
+            <form onSubmit={this.handleOnSubmit}>
+              <section className="project-form__title">
+                <Input name="project-title"
                        type="text"
-                       label="Project Logo URL"
+                       label="Project Title"
                 />
-            </section>
-            <section className="project-form__description">
-              <span className="input">
-                <label htmlFor="project-description"
-                       className="project-description__label"
-                >
-                  Project Description
-                </label>
-                <textarea rows="5" className="project-description__textarea" />
-              </span>
-            </section>
-            <section className="project-form__contact">
-              <h3 className="project-form__section-title">
-                Project Contact information
-              </h3>
-                <Input name="project-site"
+              </section>
+              <section className="project-form__slogan">
+                <Input name="project-slogan"
                        type="text"
-                       label="Project Site URL"
+                       label="Project Slogan"
                 />
-                <Input name="project-github-url"
-                       type="text"
-                       label="Project GitHub URL"
-                />
-            </section>
-            <section className="project-form__tags">
-                <Input name="project-tags"
-                       type="text"
-                       label="Project Tags"
-                />
-            </section>
+              </section>
+              <section className="project-form__logo">
+                  <Input name="project-logo"
+                         type="text"
+                         label="Project Logo URL"
+                  />
+              </section>
+              <section className="project-form__description">
+                <span className="input">
+                  <label htmlFor="project-description"
+                         className="project-description__label"
+                  >
+                    Project Description
+                  </label>
+                  <textarea rows="5" className="project-description__textarea" />
+                </span>
+              </section>
+              <section className="project-form__contact">
+                <h3 className="project-form__section-title">
+                  Project Contact information
+                </h3>
+                  <Input name="project-site"
+                         type="text"
+                         label="Project Site URL"
+                  />
+                  <Input name="project-github-url"
+                         type="text"
+                         label="Project GitHub URL"
+                  />
+              </section>
+              <section className="project-form__tags">
+                  <Input name="project-tags"
+                         type="text"
+                         label="Project Tags"
+                  />
+              </section>
+              <button type="submit" className="project-form__submit">
+                Submit
+              </button>
+            </form>
           </section>
           <section className="project-form__project-card">
           </section>

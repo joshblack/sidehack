@@ -71,3 +71,21 @@
     color: #686868;
     font-size: 24px;
 }
+
+.project-form__submit {
+    display: block;
+    margin: 50px auto 25px auto;
+    padding: 15px 25px;
+    border-radius: 3px;
+    background: #6AEC7B;
+    border: 1px solid transparent;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 16px;
+    color: white;
+    transition: 0.3s all;
+}
+
+.project-form__submit:hover {
+    cursor: pointer;
+    background: darken(#6AEC7B, 10%);
+}
