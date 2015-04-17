@@ -2,11 +2,13 @@ import React from 'react';
 import { Route, DefaultRoute } from 'react-router';
 
 import { App } from './components/App';
-import { Home } from './components/Home';
+import { Auth } from './components/Auth';
 import { Dashboard } from './components/Dashboard';
+import { Feed } from './components/Feed';
+import { Home } from './components/Home';
 import { Profile } from './components/Profile';
 import { Project } from './components/Project';
-import { Auth } from './components/Auth';
+import { Tasks } from './components/Tasks';
 
 
 export default (
@@ -14,6 +16,10 @@ export default (
 
     <Route name="auth" path="auth" handler={Auth}>
       <Route name="dashboard" path="dashboard" handler={Dashboard} />
+
+      <Route name="feed" path="feed" handler={Feed} />
+      <Route name="tasks" path="tasks" handler={Tasks} />
+
     </Route>
 
     <Route name="profile" path="/user/:userId/" handler={Profile} />
@@ -22,5 +28,3 @@ export default (
     <DefaultRoute handler={Home}/>
   </Route>
 )
-
-// <Route name="dashboard" path="/user/:userId/dashboard" handler={Dashboard} />

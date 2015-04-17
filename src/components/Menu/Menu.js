@@ -29,7 +29,7 @@ export class Menu extends React.Component {
           </div>
         </div>
         <ul className="menu--nav">
-          <Link to="/">
+          <Link to="feed">
             <li className="menu--nav-link">
               <span>
                 <FeedIcon className="menu--nav-icon" />
@@ -37,7 +37,7 @@ export class Menu extends React.Component {
               <p>Feed</p>
             </li>
           </Link>
-          <Link to="/">
+          <Link to="tasks">
             <li className="menu--nav-link">
               <span>
                 <TasksIcon className="menu--nav-icon menu--nav-icon__tasks" />

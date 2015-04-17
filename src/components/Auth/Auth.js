@@ -1,14 +1,7 @@
 import React from 'react';
 import { RouteHandler } from 'react-router';
-
-import from './Auth.scss';
-
-// statics
-// loggedIn()
-// login
-// logout
 import API from '../../../lib/sidehack-client-api';
-
+import from './Auth.scss';
 
 export class Auth extends React.Component {
   constructor () {
@@ -32,8 +25,13 @@ export class Auth extends React.Component {
       const user = await Auth.login();
 
       setTimeout(() => {
-        this.setState({ loggedIn: true, user });
-        router.transitionTo('/auth/dashboard');
+        if (!user ) {
+          router.transitionTo('/');
+        }
+        else {
+          this.setState({ loggedIn: true, user });
+          router.transitionTo('/auth/dashboard');
+        }
       }, 2000);
     }
     catch (e) {
