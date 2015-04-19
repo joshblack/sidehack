@@ -16,7 +16,8 @@ export class Input extends React.Component {
   static propTypes = {
     type: React.PropTypes.string.isRequired,
     name: React.PropTypes.string.isRequired,
-    label: React.PropTypes.string.isRequired
+    label: React.PropTypes.string.isRequired,
+    onChange: React.PropTypes.func
   }
 
   handleOnFocus () {
@@ -43,6 +44,7 @@ export class Input extends React.Component {
                className="input__field input__field--hoshi"
                onFocus={this.handleOnFocus}
                onBlur={this.handleOnBlur}
+               onChange={this.props.onChange}
         />
         <label htmlFor={this.props.name}
                className="input__label input__label--hoshi input__label--hoshi-color-2"

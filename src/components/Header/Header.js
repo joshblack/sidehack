@@ -49,7 +49,7 @@ export class Header extends React.Component {
             <Link to="/">Discover</Link>
           </li>
           <li className="site-header__list-item site-header__list-item--link">
-            <Link to="/">Start</Link>
+            <Link to="new-project">Start</Link>
           </li>
           <li className="site-header__list-item site-header__list-item--search">
             <Search queryUpdate={this.queryUpdate} />

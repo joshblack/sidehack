@@ -1,4 +1,5 @@
 import React from 'react';
+import API from '../../../lib/sidehack-client-api';
 import { Link } from 'react-router';
 import { Image } from '../Image';
 import { FeedIcon, TasksIcon } from '../Icon';
@@ -6,12 +7,43 @@ import { FeedIcon, TasksIcon } from '../Icon';
 import from './Menu.scss';
 
 export class Menu extends React.Component {
+  constructor () {
+    this.state = { loading: true, projects: {} };
+  }
+
   static contextTypes = {
     user: React.PropTypes.object.isRequired
   }
 
+  async componentDidMount () {
+    const { id } = this.context.user,
+          { user } = await API.get('users', id);
+
+    this.setState({ loading: false, projects: user.projects });
+    console.log('changing state');
+  }
+
   render () {
     const { user } = this.context;
+    const projects = this.state.loading
+      ? ''
+      : this.state.projects.map((project) => {
+          return (
+            <Link to={`/auth/projects/${project.id}`}>
+              <li className="menu--project-list-item">
+                <Image
+                  alt={project.name}
+                  src={project.avatar_url}
+                  width={25}
+                  height={25}
+                />
+                <p>{project.name}</p>
+              </li>
+            </Link>
+          );
+        });
+
+    console.log(this.state);
     return (
       <div className="menu">
         <div className="menu--container">
@@ -48,39 +80,7 @@ export class Menu extends React.Component {
         </ul>
         <h4 className="menu--section-title">PROJECTS</h4>
         <ul className="menu--project-list">
-          <Link to="/">
-            <li className="menu--project-list-item">
-              <Image
-                alt="Project List Item Picture"
-                src="http://placehold.it/25x25"
-                width={25}
-                height={25}
-              />
-              <p>Hello Ruby</p>
-            </li>
-          </Link>
-          <Link to="/">
-            <li className="menu--project-list-item">
-              <Image
-                alt="Project List Item Picture"
-                src="http://placehold.it/25x25"
-                width={25}
-                height={25}
-              />
-              <p>Sense</p>
-            </li>
-          </Link>
-          <Link to="/">
-            <li className="menu--project-list-item">
-              <Image
-                alt="Project List Item Picture"
-                src="http://placehold.it/25x25"
-                width={25}
-                height={25}
-              />
-              <p>ElectroThrill</p>
-            </li>
-          </Link>
+          {projects}
         </ul>
       </div>
     );

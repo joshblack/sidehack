@@ -8,7 +8,7 @@ import from './ProjectInfo.scss';
 export class ProjectInfo extends React.Component {
   static propTypes = {
     project: React.PropTypes.shape({
-      about: React.PropTypes.string.isRequired,
+      description: React.PropTypes.string.isRequired,
       members: React.PropTypes.array.isRequired
     }).isRequired
   }
@@ -20,7 +20,7 @@ export class ProjectInfo extends React.Component {
           <li className="member-list__item">
             <Image
               alt="Member Profile Image"
-              src={member.url}
+              src={member.avatar_url}
               width={65}
               height={65}
             />
@@ -34,7 +34,7 @@ export class ProjectInfo extends React.Component {
         <section className="project-info__section">
           <header className="project-info__section-header">ABOUT</header>
           <p className="project-info__section-body">
-            {this.props.project.about}
+            {this.props.project.description}
           </p>
         </section>
         <section className="project-info__section">

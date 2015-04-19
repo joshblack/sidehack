@@ -22,11 +22,10 @@ export default (
       <Route name="tasks" path="tasks" handler={Tasks} />
 
       <Route name="new-project" path="projects/new" handler={ProjectForm} />
+      <Route name="project" path="projects/:id" handler={Project} />
     </Route>
 
     <Route name="profile" path="/user/:userId/" handler={Profile} />
-
-    <Route name="project" path="/project" handler={Project} />
     <DefaultRoute handler={Home}/>
   </Route>
 )

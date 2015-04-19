@@ -2,11 +2,19 @@ import React from 'react';
 import { Header } from '../Header';
 import { Menu } from '../Menu';
 import { Input } from '../Input';
+import API from '../../../lib/sidehack-client-api';
 import from './ProjectForm.scss';
 
 export class ProjectForm extends React.Component {
+  constructor () {
+    this.state = { values: {} };
+
+    this.handleOnSubmit = this.handleOnSubmit.bind(this);
+    this.handleOnChange = this.handleOnChange.bind(this);
+  }
+
   static contextTypes = {
-    user: React.PropTypes.object
+    router: React.PropTypes.func
   }
 
   static childContextTypes = {
@@ -17,11 +25,43 @@ export class ProjectForm extends React.Component {
     return { user: this.props.user };
   }
 
-  handleOnSubmit (e) {
+  async handleOnSubmit (e) {
     e.preventDefault();
 
-    // TODO: Handle submit of project information
+    const { user } = this.props;
+    const { values } = this.state;
+    const { router } = this.context;
+
+    if (values) {
+
+      const newProject = Object.keys(values).reduce((o, v) => {
+        let key = v.split('-')[1];
+
+        return Object.assign(o, { [key]: values[v] });
+      }, {});
+
+      try {
+        const body = Object.assign({}, newProject, { user }),
+              res = await API.post(JSON.stringify(body), 'projects');
+
+        const { id } = res.project;
+
+        router.transitionTo(`/auth/projects/${id}`);
+      }
+      catch (e) {
+        throw e;
+      }
+    }
+
     // TODO: Input validations
+  }
+
+  handleOnChange (e) {
+    const { name, value } = e.target;
+
+    this.setState({
+      values: Object.assign({}, this.state.values, { [name]: value })
+    });
   }
 
   render () {
@@ -46,18 +86,21 @@ export class ProjectForm extends React.Component {
                 <Input name="project-title"
                        type="text"
                        label="Project Title"
+                       onChange={this.handleOnChange}
                 />
               </section>
-              <section className="project-form__slogan">
-                <Input name="project-slogan"
+              <section className="project-form__tagline">
+                <Input name="project-tagline"
                        type="text"
-                       label="Project Slogan"
+                       label="Project Tagline"
+                       onChange={this.handleOnChange}
                 />
               </section>
               <section className="project-form__logo">
                   <Input name="project-logo"
                          type="text"
                          label="Project Logo URL"
+                         onChange={this.handleOnChange}
                   />
               </section>
               <section className="project-form__description">
@@ -67,7 +110,11 @@ export class ProjectForm extends React.Component {
                   >
                     Project Description
                   </label>
-                  <textarea rows="5" className="project-description__textarea" />
+                  <textarea rows="5"
+                            name="project-description"
+                            className="project-description__textarea"
+                            onChange={this.handleOnChange}
+                  />
                 </span>
               </section>
               <section className="project-form__contact">
@@ -77,16 +124,19 @@ export class ProjectForm extends React.Component {
                   <Input name="project-site"
                          type="text"
                          label="Project Site URL"
+                         onChange={this.handleOnChange}
                   />
                   <Input name="project-github-url"
                          type="text"
                          label="Project GitHub URL"
+                         onChange={this.handleOnChange}
                   />
               </section>
               <section className="project-form__tags">
                   <Input name="project-tags"
                          type="text"
                          label="Project Tags"
+                         onChange={this.handleOnChange}
                   />
               </section>
               <button type="submit" className="project-form__submit">
