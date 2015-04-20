@@ -6,6 +6,22 @@ import { FeedIcon, TasksIcon } from '../Icon';
 
 import from './Menu.scss';
 
+function createProjectListItem(project, i) {
+  return (
+    <Link to="project" params={{ id: project.id }} key={i}>
+      <li className="menu--project-list-item">
+        <Image
+          alt={project.name}
+          src={project.avatar_url}
+          width={25}
+          height={25}
+        />
+        <p>{project.name}</p>
+      </li>
+    </Link>
+  );
+}
+
 export class Menu extends React.Component {
   constructor () {
     this.state = { loading: true, projects: {} };
@@ -20,30 +36,15 @@ export class Menu extends React.Component {
           { user } = await API.get('users', id);
 
     this.setState({ loading: false, projects: user.projects });
-    console.log('changing state');
   }
 
   render () {
     const { user } = this.context;
     const projects = this.state.loading
       ? ''
-      : this.state.projects.map((project) => {
-          return (
-            <Link to={`/auth/projects/${project.id}`}>
-              <li className="menu--project-list-item">
-                <Image
-                  alt={project.name}
-                  src={project.avatar_url}
-                  width={25}
-                  height={25}
-                />
-                <p>{project.name}</p>
-              </li>
-            </Link>
-          );
-        });
+      : this.state.projects.map(
+          (project, i) => createProjectListItem(project, i));
 
-    console.log(this.state);
     return (
       <div className="menu">
         <div className="menu--container">
