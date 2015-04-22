@@ -1,0 +1,56 @@
+.feed-item {
+    background: white;
+    padding: 25px;
+    border: 1px solid rgb(217, 217, 222);
+    border-radius: 3px;
+    max-width: 550px;
+    margin: 35px 0;
+}
+
+
+.feed-item__header {
+    display: flex;
+    align-items: center;
+}
+
+.feed-item__header-title {
+    margin-left: 25px;
+}
+
+.feed-item__header-title__name {
+    font-family: 'Franklin Gothic Medium';
+    color: #686868;
+    margin: 0;
+}
+
+.feed-item__header-title__date {
+    margin: 0;
+    font-family: 'Franklin Gothic Book';
+    color: #B1B1B2;
+}
+
+.feed-item__comment {
+    width: 90%;
+    border-left: 3px solid #B1B1B2;
+    margin: 25px 15px;
+    padding: 10px 20px;
+}
+
+.feed-item__comment-text {
+    font-family: 'Franklin Gothic Book';
+    font-size: 14px;
+    color: #343434;
+    line-height: 18px;
+}
+
+.feed-item__action {
+    font-family: 'Frankling Gothic Book';
+    color: #00B1FF;
+    transition: 0.2s all;
+}
+
+.feed-item__action:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: darken(#00B1FF, 15%);
+}

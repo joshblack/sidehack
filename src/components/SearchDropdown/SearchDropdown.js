@@ -20,9 +20,9 @@ export class SearchDropdown extends React.Component {
     // fetch(`/search?query=${query}`)
     setTimeout(() => {
       let results = [
-        { id: 1, name: 'Test #1', url: '/', description: "This is a description.", avatar: 'http://placehold.it/150x150' },
-        { id: 2, name: 'Test #2', url: '/', description: "This is a description.", avatar: 'http://placehold.it/150x150' },
-        { id: 3, name: 'Test #3', url: '/', description: "This is a description.", avatar: 'http://placehold.it/150x150' },
+        { id: 1, name: 'Hello Ruby', url: '/', description: "Teaching children the magic of programming.", avatar: 'http://www.helloruby.com/assets/header-home-c9616f3bf5cf396ff04892be05eaa8b5.jpg' },
+        { id: 2, name: 'React', url: '/', description: "A JavaScript Library for building User Interfaces", avatar: 'https://facebook.github.io/react/img/logo.svg' },
+        { id: 3, name: 'Flux', url: '/', description: "An Application Architecture for React", avatar: 'http://facebook.github.io/flux/img/flux_logo.svg' },
         { id: 4, name: 'Test #4', url: '/', description: "This is a description.", avatar: 'http://placehold.it/150x150' }
       ];
 
@@ -44,7 +44,7 @@ export class SearchDropdown extends React.Component {
         <ul className="search-dropdown__results">
           {
             !this.state.results
-            ? <li className="search-dropdown__result">Loading...</li>
+            ? <li className="search-dropdown--loading" />
             : this.state.results.map((result) => {
               return (
                 <Link key={result.id} to={result.url} className="search-dropdown__result-link">

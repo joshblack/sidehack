@@ -7,6 +7,7 @@ import { FeedIcon, TasksIcon } from '../Icon';
 import from './Menu.scss';
 
 function createProjectListItem(project, i) {
+  console.log('here');
   return (
     <Link to="project" params={{ id: project.id }} key={i}>
       <li className="menu--project-list-item">

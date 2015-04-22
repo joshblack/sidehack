@@ -37,6 +37,17 @@
     background: #EEEEEE;
 }
 
+.search-dropdown__result-title {
+    font-family: 'Franklin Gothic Medium';
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.search-dropdown__result-desc {
+    font-family: 'Franklin Gothic Book';
+    font-size: 18px;
+}
+
 .search-dropdown__result-info {
     margin-left: 15px;
 }
@@ -45,4 +56,18 @@
     width: 100%;
     text-decoration: none;
     color: #686868;
+}
+
+.search-dropdown--loading {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #B1B1B2;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: rotate .75s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
 }
